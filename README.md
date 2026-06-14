@@ -171,3 +171,8 @@ Output files:
 - [WTSShutdownSystem](https://learn.microsoft.com/en-us/windows/win32/api/wtsapi32/nf-wtsapi32-wtsshutdownsystem)
 - [shutdown command](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/shutdown)
 - [Microsoft Detours](https://github.com/microsoft/Detours)
+
+## Acknowledgments
+
+Special thanks to [@q2154245967-alt](https://github.com/q2154245967-alt) for
+their contributions to this project.
