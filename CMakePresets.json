@@ -1,0 +1,47 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "vs2022-x64",
+      "displayName": "Visual Studio 2022 x64",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build/vs2022-x64",
+      "cacheVariables": {
+        "SHUTDOWN_GUARD_WITH_DETOURS": "ON"
+      }
+    },
+    {
+      "name": "vs2022-x64-no-detours",
+      "displayName": "Visual Studio 2022 x64 without Detours",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build/vs2022-x64-no-detours",
+      "cacheVariables": {
+        "SHUTDOWN_GUARD_WITH_DETOURS": "OFF"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "release",
+      "configurePreset": "vs2022-x64",
+      "configuration": "Release"
+    },
+    {
+      "name": "debug",
+      "configurePreset": "vs2022-x64",
+      "configuration": "Debug"
+    },
+    {
+      "name": "release-no-detours",
+      "configurePreset": "vs2022-x64-no-detours",
+      "configuration": "Release"
+    }
+  ]
+}
